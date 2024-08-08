@@ -23,7 +23,7 @@ const PersonalRoom = () => {
     const { toast } = useToast();
     const client = useStreamVideoClient();
     const router = useRouter()
-
+    //najo7
     const { call } = useGetCallById(meetingId!)
 
     const startRoom = async () => {
