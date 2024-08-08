@@ -2,6 +2,16 @@ import React, { ReactNode } from 'react';
 import Navbar from '@/components/Navbar';
 import SideBar from '@/components/SideBar';
 
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+    title: "Yoom",
+    description: "Video Calling App",
+    icons: {
+        icon: '/icons/logo.svg'
+    }
+};
+
 function HomeLayout({ children }: {
     children:
     ReactNode // ReactNode represents any valyue can be rendered by react

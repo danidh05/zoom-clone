@@ -15,16 +15,21 @@ export const tokenProvider= async ()=>
     if(!apiSecret) throw new Error('No API Secret')
 
         const client= new StreamClient(apiKey,apiSecret)
-
         const exp =Math.round(new Date().getTime() /1000)+ 60 * 60;
         //a token will be valid for 1 hour according to this math fct
 
         const issued= Math.floor(Date.now() / 1000) - 60
         //when the token was issued
-
+        console.log('User:', user);
+        console.log('API Key:', apiKey);
+        console.log('API Secret:', apiSecret);
+        console.log('Token Expiration:', exp);
+        console.log('Token Issuance:', issued);
+        
         const token=client.createToken(user.id,exp,issued)
-
+        
         return token
+        
 }
 
 // The tokenProvider function is designed to:
